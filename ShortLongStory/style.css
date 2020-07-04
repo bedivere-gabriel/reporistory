@@ -1,0 +1,119 @@
+body,html{
+    height: 100%;
+    width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #d5d5d5d5;
+}
+
+html[data-theme="light"] {
+    --body-bg: #CDCBCD;
+    --bg: #EBEAEB;
+    --color-heading: #2A282A;
+    --color-text: #1F1E1F;
+
+}
+
+html[data-theme="dark"]{
+    --body-bg: #2F2D2E;
+    --bg: #353535;
+    --color-heading: #CDCBCD;
+    --color-text: #EBEAEB;
+
+}
+
+body {
+    background: var(--body-bg);
+    background-position: 0 0;
+}
+
+.container{
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-body{
+    background-color: var(--bg);
+    margin: 5em;
+    padding: 5em;
+    border-radius: 15px;
+
+    display: grid;
+    grid-template-columns: 80% auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "title title"
+    "cover cover"
+    "content content"
+}
+
+
+.container-body h1 {
+    margin: 0;
+    color: var(--color-heading);
+    grid-area: title;
+    justify-self: center;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.container-body p {
+    color: var(--color-text);
+    grid-area: content;
+    line-height: 2em;
+    margin: 2em;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 17px;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+	background: grey;
+	float: right;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: green;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
