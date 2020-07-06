@@ -1,0 +1,19 @@
+body,html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #d5d5d5d5;
+}
+
+.padding {
+    padding: 2em;
+}
+
+.contain {
+    height: auto;
+    background-color: grey;
+}
+
+p {
+    line-height: 2.5em;
+}
