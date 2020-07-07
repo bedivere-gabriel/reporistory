@@ -267,7 +267,6 @@ html.transition *:after {
 
 .carousel-caption h3{
     text-shadow: 1px 1px 5px #000f;
-    font-size: 200%;
     font-weight: 500;
 }
 
@@ -473,12 +472,16 @@ hr.light {
     transition: .25s;
 }
 
+.carouselparagraph {
+    font-size: 3rem;
+}
+
 @media only screen and (max-width: 960px){
     .carouselheader{
-        font-size: 2.0rem;
+        font-size: 3rem;
     }
     .carouselparagraph{
-        font-size: 10px;
+        font-size: 2.5rem;
     }
 }
 
@@ -487,16 +490,16 @@ hr.light {
         font-size: 1.5rem;
     }
     .carouselparagraph{
-        font-size: 10px;
+        font-size: 1.5rem;
     }
 }
 
 @media only screen and (max-width: 600px){
     .carouselheader{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .ccarouselparagraph{
-        font-size: 10px;
+        font-size: .8rem;
     }
 }
 
