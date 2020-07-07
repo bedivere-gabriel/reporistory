@@ -416,30 +416,6 @@ hr.light {
     }
 }
 
-.grid {
-    position: absolute;
-    z-index: 3;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-    padding: 0;
-}
-
-.grid_item {
-    background-image: url(img/dots.png);
-    background-size: 50px;
-    width: 50px;
-    height: 50px;
-    opacity: 0%;
-    transition: opacity 2s ease 0.4s, transform 0.8s ease;
-    transform: scale(1);
-}
-
-.grid_item:hover {
-    opacity: 80%;
-    transition: opacity 0.2s ease;
-    transform: scale(1.04);
-}
-
 /* Media Queries */
 @media (max-witdth: 992px){
 
@@ -463,6 +439,38 @@ hr.light {
 /*Bootstrap padding fix*/
 [class*="col-"]{
     padding: 1rem;
+}
+
+/* pointer trail */
+.pointer {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-image: url(img/dots.png);
+    background-size: 100%;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+.pointer1 {
+    
+    transition: 0.1s;
+}
+
+.pointer2 {
+    transition: 0.15s;
+}
+
+.pointer3 {
+    transition: 0.2s;
+}
+
+.pointer4 {
+    transition: .25s;
 }
 
 @media only screen and (max-width: 960px){

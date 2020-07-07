@@ -45,19 +45,6 @@ function myFunction(){
       }, 1000)
   }
 
-  let griditems
-
-  var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-  if(width <= 600){
-    griditems = 200
-  }
-  else if (width <= 700){
-    griditems = 500
-  }
-  else {
-    griditems =800
-  }
-
-  for(var i =1; i<= griditems; i++){
-    $('#target-grid').append($('<div/>', {'class' : 'grid_item'}))
-  }
+  $(document).mousemove (function(e){
+    $('.pointer').css({left:e.pageX, top:e.pageY});
+  })
