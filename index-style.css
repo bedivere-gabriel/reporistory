@@ -140,8 +140,9 @@ body,html{
     background-color: #121214;
 }
 
-.card > img {
-    width: 100%;
+.card {
+    justify-content: center;
+    align-items: center;
 }
 
 .padding{
