@@ -140,7 +140,7 @@ body,html{
     background-color: #121214;
 }
 
-.card-img-top {
+.card > img {
     width: 100%;
 }
 
