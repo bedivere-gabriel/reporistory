@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <title>GABRIEL PORTFOLIO</title>
     <!-- Required meta tags -->
@@ -15,18 +15,24 @@
     <link rel="stylesheet" href="index-style.css">
     <!-- Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- Animane on Scroll-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
     
   
   <!-- Body Starts -->
-  <body class="disable-scroll" id="bodyID">
+  <body class="disable-scroll" id="bodyID" onload="loadfunction()">
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <!-- Loader -->
+    <div class="bg-loader" id="bg_loader"></div>
+    <div id="loader"></div>
+    
     <!-- Cover Photo -->
     <div class="cover container-fluid" id="topscroll">
       <div class="coverPhoto" id="coverphoto">
@@ -37,7 +43,7 @@
     </div>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" id="navigation">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><img src="img/Logo_Version_2_Final.png" width="70px"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,10 +61,17 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
               </li>
+              <li class="nav-item">
+                <div class="toggle-container">
+                    <input type="checkbox" id="switch" name="theme"/><label for="switch" >Toggle</label>
+                </div>
+              </li>
           </ul>  
         </div>
     </div>
     </nav>
+
+    <div class="grid"></div>
 
     <!-- Carousel -->
     <div class="carousel slide" id="slides" data-ride="carousel">
@@ -80,10 +93,10 @@
       </div>
       </div>
     <!-- jumbotron -->
-      <div class="container-fluid">
+      <div class="container-fluid text-center" data-aos="zoom-out">
       <div class="row jumbotron padding">
         <div class="col-lg-4">
-            <img src="img/Logo_character.png" class="image_profile img-fluid " width="100px">
+            <img src="img/Logo_character.png" class="image_profile img-fluid" width="80px">
         </div>
         <div class="col-lg-8">
           <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -91,7 +104,7 @@
       </div>
       </div>
     <!-- My Portfolio Title -->
-    <div class="container-fluid padding" id="portf">
+    <div class="container-fluid padding" id="portf" data-aos="fade-right">
     <div class="row welcome text-center">
         <div class="col-12">
           <h1 class="display 4">My Portfolio</h1>
@@ -101,7 +114,7 @@
     </div>
 
     <!-- My Portfolio Cards-->
-    <div class="container-fluid">
+    <div class="container-fluid" data-aos="fade-up">
       <div class="row padding"> 
         <!-- card -->
           <div class="col-md-4">
@@ -142,7 +155,7 @@
 
 
     <!-- Programming Languages Title -->
-     <div class="container-fluid padding">
+     <div class="container-fluid padding" data-aos="fade-up">
       <div class="row welcome text-center">
           <div class="col-12">
             <h1 class="display 4">My Programming Languages</h1>
@@ -155,7 +168,7 @@
       </div>
     
     <!-- programming languages rating -->
-    <div class="container-fluid padding">
+    <div class="progs container-fluid padding" data-aos="fade-up">
     <div class="row text-center padding">
       <!-- -->
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center padding">
@@ -286,11 +299,10 @@
         </svg>
       </div>
     </div>
-    <hr class="my-4">
     </div>
 
     <!-- Other skills -->
-    <div class="container-fluid">
+    <div class="container-fluid" data-aos="fade-right">
     <div class="row welcome text-center">
       <div class="col-12">
           <h1 class="display 4">My Personal Skills</h1>
@@ -303,15 +315,16 @@
     </div>
 
     <!-- Skills -->
-    <div class="container-fluid">
+    <div class="personal-skill container-fluid">
       <!---->
       <div class="row welcome text-center">
         <div class="col-4">
-            <div class="text-center padding">
+            <div class="text-center padding" data-aos="fade-up">
                 <p class="lead">Digital Art</p>
             </div>
         </div>  
-        <div class="col-8">
+        <div class="col-1"></div>
+        <div class="col-7"data-aos="fade-up">
             <div class="progress"  style="height: 1.7em;">
               <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
             </div>
@@ -320,11 +333,12 @@
         <!---->
       <div class="row welcome text-center">
         <div class="col-4">
-            <div class="text-center padding">
+            <div class="text-center padding" data-aos="fade-up">
               <p class="lead">Trditional Art</p>
             </div>
         </div>  
-        <div class="col-8">
+        <div class="col-1"></div>
+        <div class="col-7" data-aos="fade-up">
             <div class="progress"  style="height: 1.7em;">
               <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">70%</div>
             </div>
@@ -333,11 +347,12 @@
         <!---->
       <div class="row welcome text-center">
         <div class="col-4">
-            <div class="text-center padding">
+            <div class="text-center padding" data-aos="fade-up">
               <p class="lead">Photo Manipulation</p>
             </div>
         </div>  
-        <div class="col-8">
+        <div class="col-1"></div>
+        <div class="col-7" data-aos="fade-up">
             <div class="progress"  style="height: 1.7em;">
               <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">70%</div>
             </div>
@@ -346,11 +361,12 @@
         <!---->
       <div class="row welcome text-center">
         <div class="col-4">
-            <div class="text-center padding">
+            <div class="text-center padding" data-aos="fade-up">
               <p class="lead">Essay Writing</p>
             </div>
         </div>  
-        <div class="col-8">
+        <div class="col-1"></div>
+        <div class="col-7" data-aos="fade-up">
             <div class="progress" style="height: 1.7em;">
               <div class="progress-bar" role="progressbar" style="width: 83%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">83%</div>
             </div>
@@ -359,11 +375,12 @@
         <!---->
       <div class="row welcome text-center">
         <div class="col-4">
-            <div class="text-center padding">
+            <div class="text-center padding" data-aos="fade-up">
               <p class="lead">Content Writing</p>
             </div>
         </div>  
-        <div class="col-8">
+        <div class="col-1"></div>
+        <div class="col-7" data-aos="fade-up">
             <div class="progress" style="height: 1.7em;">
               <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
             </div>
@@ -372,11 +389,12 @@
         <!---->
       <div class="row welcome text-center">
         <div class="col-4">
-            <div class="text-center padding">
+            <div class="text-center padding" data-aos="fade-up">
               <p class="lead">Photography</p>
             </div>
         </div>  
-        <div class="col-8">
+        <div class="col-1"></div>
+        <div class="col-7" data-aos="fade-up">
             <div class="progress" style="height: 1.7em;">
               <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">55%</div>
             </div>
@@ -385,11 +403,12 @@
         <!---->
       <div class="row welcome text-center">
         <div class="col-4">
-            <div class="text-center padding">
+            <div class="text-center padding" data-aos="fade-up">
               <p class="lead">Problem Solving</p>
             </div>
         </div>  
-        <div class="col-8">
+        <div class="col-1"></div>
+        <div class="col-7" data-aos="fade-up">
             <div class="progress" style="height: 1.7em;">
               <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
             </div>
@@ -398,11 +417,12 @@
         <!---->
       <div class="row welcome text-center">
         <div class="col-4">
-            <div class="text-center padding">
+            <div class="text-center padding" data-aos="fade-up">
               <p class="lead">Communication Skill</p>
             </div>
         </div>  
-        <div class="col-8">
+        <div class="col-1"></div>
+        <div class="col-7" data-aos="fade-up">
             <div class="progress" style="height: 1.7em;">
               <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
             </div>
@@ -445,5 +465,9 @@
   </body>
 
   <script src="index.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({offset: 700, duration: 1500});
+  </script>
 
 </html>
