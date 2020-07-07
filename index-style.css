@@ -146,7 +146,7 @@ html.transition *:after {
 }
 */
 
-
+/*
 @media only screen and (min-width: 800px) {
     .grid{
         height: 700px;
@@ -164,13 +164,13 @@ html.transition *:after {
         height: 350px;
     }
 }
-
+*/
 
 .coverPhoto > img{
     position: fixed;
     top: 0%;
     left: 0%;
-    z-index: 4;
+    z-index: 5;
     width: 100%;
     height: 100%;
 }
@@ -180,7 +180,7 @@ html.transition *:after {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -70%);
-    z-index: 5;
+    z-index: 6;
     font-size: 55px;
     color: #ffff;
 }
@@ -191,7 +191,7 @@ html.transition *:after {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 5;
+    z-index: 6;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 28px;
     padding: .5em;
@@ -233,7 +233,7 @@ html.transition *:after {
 
 .navbar{
     padding: .8rem;
-    z-index: 3;
+    z-index: 4;
 }
 
 .navbar-nav li {
@@ -416,6 +416,30 @@ hr.light {
     }
 }
 
+.grid {
+    position: absolute;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    padding: 0;
+}
+
+.grid_item {
+    background-image: url(img/dots.png);
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    opacity: 0%;
+    transition: opacity 2s ease 0.4s, transform 0.8s ease;
+    transform: scale(1);
+}
+
+.grid_item:hover {
+    opacity: 80%;
+    transition: opacity 0.2s ease;
+    transform: scale(1.04);
+}
+
 /* Media Queries */
 @media (max-witdth: 992px){
 
@@ -445,11 +469,27 @@ hr.light {
     .carouselheader{
         font-size: 2.0rem;
     }
+    .carouselparagraph{
+        font-size: 1em;
+    }
 }
 
 @media only screen and (max-width: 720px){
     .carouselheader{
         font-size: 1.5rem;
     }
+    .carouselparagraph{
+        font-size: 1em;
+    }
 }
+
+@media only screen and (max-width: 600px){
+    .carouselheader{
+        font-size: 1.5rem;
+    }
+    .carouselparagraph{
+        font-size: .8em;
+    }
+}
+
 
