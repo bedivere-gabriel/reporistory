@@ -150,9 +150,26 @@ html.transition *:after {
 .grid {
     position: absolute;
     width: 100%;
-    height: 100px;
     z-index: 2;
     background: white;
+}
+
+@media only screen and (min-width: 800px) {
+    .grid{
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    .grid{
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .grid{
+        height: 200px;
+    }
 }
 
 
