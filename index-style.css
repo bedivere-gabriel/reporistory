@@ -140,17 +140,12 @@ body,html{
     background-color: #121214;
 }
 
-.card {
-    justify-content: center;
-    align-items: center;
-}
-
 .padding{
     padding-bottom: 2rem;
 }
 
 .card-img-top{
-    max-width: 400px;
+    max-width: 100%;
 }
 
 .welcome hr{
