@@ -276,6 +276,11 @@ html.transition *:after {
     background-color: var(--panel);
 }
 
+.jumbotron p {
+    text-align: justify;
+    text-justify: auto;
+}
+
 .padding{
     padding-bottom: 2rem;
 }
@@ -476,7 +481,7 @@ hr.light {
     font-size: 3rem;
 }
 
-@media only screen and (max-width: 960px){
+@media only screen and (min-width: 721px){
     .carouselheader{
         font-size: 3rem;
     }
