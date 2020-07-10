@@ -93,7 +93,28 @@ h1 {
 }
 
 p {
-    padding-top: 2em;   
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 2em;   
+	font-size: 15px;;
     line-height: 2.5em;
     color: var(--paragraph);
+}
+
+@media only screen and(max-width:900px){
+	p {
+		font-size: 20px;
+	}
+}
+
+@media only screen and(max-width:700px){
+	p {
+		font-size: 20px;
+	}
+}
+
+@media only screen and(max-width:650px){
+	p {
+		font-size: 10px;
+	}
 }
